@@ -14,7 +14,7 @@
 *
 */
 
-
+@import "./variables";
 
 .text-small {
   font-size: 0.9rem !important;
@@ -25,7 +25,7 @@ body {
 }
 
 .page-holder {
-  width: calc(100% - $custom-width);
+  width: 100% - $custom-width;
   margin-left: $custom-width;
   min-height: 100vh;
   /* -webkit-transition: all 0.3s linear;

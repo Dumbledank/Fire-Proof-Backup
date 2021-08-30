@@ -235,7 +235,7 @@ body {
 }
 
 .page-holder {
-  width: calc(100% - $custom-width);
+  width: 82%;
   margin-left: 18%;
   min-height: 100vh;
   /* -webkit-transition: all 0.3s linear;
@@ -251,7 +251,7 @@ body {
 }
 
 .page-holder.active {
-  /* width: calc(100% - $sidebar-width); */
+  /* width: 100% - $sidebar-width; */
   margin-left: 18rem;
 }
 
