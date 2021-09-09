@@ -1,19 +1,42 @@
 
+// mixins
+@mixin for-mobile-protrate-down {
+    @media (max-width: 411px) { @content; }
+}
+
 /* About me page module */
 
-.about-me {
-    padding: 48px 24px;
+.about-me-container {
+
+    @media (min-width: 900px) {
+        padding: 24px 0;
+        }
 }
-  
+
+.about-me {
+    padding: 24px;
+    display: block;
+
+    @media (min-width: 900px) {
+        width: 750px;
+        margin: auto;
+        border: 1px solid black;
+    }
+}
+
 .profile-img {
-border-radius: 50%;
-width: 250px;
-margin: 16px;
-vertical-align: middle;
+    border-radius: 50%;
+    width: 250px;
+    margin: 30px;
+    vertical-align: middle;
+    
+    @include for-mobile-protrate-down {
+        margin: 0 24px 24px 24px;
+    }
 }
 
 .profile-img-container {
-    @media (max-width: 411px) {
+    @include for-mobile-protrate-down {
     text-align: center;
     }
 }

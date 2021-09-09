@@ -1,108 +1,97 @@
 /* NAV */
 .nav-container {
   background-color: #2d3e4f;
+  opacity: .9;
   position: fixed;
-  opacity: .95;
   z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 900px) {
   .nav-container {
-    width: 18%;
+    width: 20%;
     height: 100%;
   }
 }
 
-@media (max-width: 990px) {
-  .nav-container {
-    z-index: 10;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: auto;
-    width: 100%;
-    height: auto;
-    float: none;
-  }
-}
-
-.nav-content {
-  color: aliceblue;
-}
-
 .flex-container {
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 900px) {
   .flex-container {
-    text-align: center;
+    padding: 0;
   }
 }
 
-@media (max-width: 990px) {
-  .flex-container {
+.fire-emblem {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media (min-width: 900px) {
+  .fire-emblem {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-.nav-container .navbar-brand {
-  margin: 0;
-}
-
-@media (min-width: 991px) {
-  .nav-container .navbar-brand {
-    padding: 40px 0;
-  }
-}
-
-@media (max-width: 990px) {
-  .nav-container .navbar-brand {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 40px 0;
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+        -ms-flex: none;
+            flex: none;
+    width: auto;
+    height: 80px;
   }
 }
 
-@media (min-width: 991px) {
-  .navbar-brand img {
+.fire-emblem img {
+  width: 40px;
+}
+
+@media (min-width: 900px) {
+  .fire-emblem img {
     width: 80px;
   }
 }
 
-@media (max-width: 990px) {
-  .navbar-brand img {
-    width: 39px;
-  }
+#icon-container {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin-left: auto;
+  padding-inline: 20px;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 900px) {
   #icon-container {
     display: none;
-  }
-}
-
-@media (max-width: 990px) {
-  #icon-container {
-    display: inline-block;
-    cursor: pointer;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    margin-left: auto;
-    padding: 0 20px;
   }
 }
 
@@ -135,56 +124,91 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-style: italic;
+  display: none;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 900px) {
   #nav-animation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-}
-
-@media (max-width: 990px) {
-  #nav-animation {
-    display: none;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .nav-container nav a {
-  color: var(--custom-color);
   padding: 20px;
+  font-size: large;
+  color: aliceblue;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 900px) {
   .nav-container nav a {
     font-size: x-large;
   }
 }
 
-@media (max-width: 990px) {
-  .nav-container nav a {
-    font-size: large;
+/* MAIN PAGE */
+.page-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 59px;
+  left: 0;
+}
+
+@media (min-width: 900px) {
+  .page-container {
+    width: 80%;
+    left: 20%;
+    top: 0px;
   }
 }
 
+/* BANNER */
+.banner {
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/wave.png);
+  background-size: cover;
+}
+
 /* About me page module */
+@media (min-width: 900px) {
+  .about-me-container {
+    padding: 24px 0;
+  }
+}
+
 .about-me {
-  padding: 48px 24px;
+  padding: 24px;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .about-me {
+    width: 750px;
+    margin: auto;
+    border: 1px solid black;
+  }
 }
 
 .profile-img {
   border-radius: 50%;
   width: 250px;
-  margin: 16px;
+  margin: 30px;
   vertical-align: middle;
+}
+
+@media (max-width: 411px) {
+  .profile-img {
+    margin: 0 24px 24px 24px;
+  }
 }
 
 @media (max-width: 411px) {
@@ -235,24 +259,25 @@ body {
 }
 
 .page-holder {
-  width: 82%;
-  margin-left: 18%;
-  min-height: 100vh;
-  /* -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear; */
+  width: 100%;
+  margin-left: 0;
+  margin-top: 59px;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 900px) {
   .page-holder {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 59px;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 0;
+    min-height: 100vh;
+    /* -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear; */
   }
 }
 
 .page-holder.active {
-  /* width: 100% - $sidebar-width; */
-  margin-left: 18rem;
+  /* width: calc(100% - $sidebar-width); */
+  margin-left: 20%;
 }
 
 /*
@@ -3174,5 +3199,16 @@ code {
 
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0 24px 24px 24px;
+}
+
+.footer-col {
+  padding-top: 24px;
 }
 /*# sourceMappingURL=custom.css.map */
